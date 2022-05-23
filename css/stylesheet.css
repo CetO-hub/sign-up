@@ -1,0 +1,57 @@
+:root {
+  --form-height: min(800px, 50vh);
+  --form-width: min(1420px, 50vw);
+  --img-width: min(640px, 50vw);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.complete-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: var(--img-width)
+}
+
+img {
+  width: var(--img-width)
+  height: auto;
+}
+
+.left-column {
+  position: relative;
+}
+
+.right-column {
+  background-color: white;
+}
+
+span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.left-column p {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: black;
+  opacity: 0.8;
+  width: clamp(30px, 50%, 90%);
+  left: 25%;
+  bottom: 1%;
+  font-size: 1rem;
+  padding: 3px;
+  text-align: center;
+}
