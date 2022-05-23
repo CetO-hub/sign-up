@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/stylesheet.css" />
     <title>Document</title>
+    <script defer>
+      function compare() {
+        let isPassword = document.querySelector("#password");
+        let isPasswordConfirm = document.querySelector(
+          "#password-confirmation"
+        );
+        if (
+          isPassword.value === isPasswordConfirm.value &&
+          isPassword.value != ""
+        ) {
+          alert("Correct!");
+        } else return;
+      }
+
+      document.addEventListener("mousemove", compare);
+    </script>
   </head>
   <body>
     <div class="complete-form">
@@ -33,6 +49,7 @@
             <div class="form-field">
               <label for="first-name">First Name</label>
               <input
+                required
                 type="text"
                 name="firstName"
                 id="first-name"
@@ -42,6 +59,7 @@
             <div class="form-field">
               <label for="last-name">Last Name</label>
               <input
+                required
                 type="text"
                 name="lastName"
                 id="last-name"
@@ -51,11 +69,13 @@
             <div class="form-field">
               <label for="email">email</label>
               <input
+                required
                 type="email"
                 name="email"
                 id="email"
                 placeholder="erik.eriksson@gmail.com"
               />
+              <div class="requirements">Not a valid email</div>
             </div>
             <div class="form-field">
               <label for="number">Phone Number</label>
@@ -69,24 +89,32 @@
             <div class="form-field">
               <label for="password">Password</label>
               <input
+                required
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
                 type="password"
                 name="password"
                 id="password"
-                placeholder=""
+                placeholder=" "
               />
+              <div class="requirements">
+                Your password must be at least 6 characters as well as contain
+                at least one uppercase, one lowercase, and one number.
+              </div>
             </div>
             <div class="form-field">
               <label for="password-confirmation">Confirm password</label>
               <input
+                required
                 type="password"
                 name="passwordConfirmation"
                 id="password-confirmation"
-                placeholder=""
+                placeholder=" "
               />
+              <div class="requirements">Password does not match</div>
             </div>
           </div>
           <div class="form-footer">
-            <button>Create Account</button>
+            <button type="submit">Create Account</button>
             <p>Already haven an account? <a href="">Log In</a></p>
           </div>
         </form>

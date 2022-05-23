@@ -120,6 +120,8 @@ img:nth-child(2n) {
 }
 
 .form-field {
+  width: 40%;
+  height: 55px;
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
@@ -181,4 +183,14 @@ button {
 button:hover,
 a:hover {
   cursor: pointer;
+}
+
+.requirements {
+  overflow: hidden;
+}
+
+input[type="text"]:invalid:not(:focus):not(:placeholder-shown),
+input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+input[type="password"]:invalid:not(:focus):not(:placeholder-shown) {
+  background-color: rgb(248, 103, 103);
 }
