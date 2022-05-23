@@ -11,39 +11,80 @@
     <div class="complete-form">
       <div class="left-column">
         <img src="./img/background.jpg" alt="background-image" />
+        <!-- <img src="./img/logo.png" alt="logo" /> -->
         <p>Photo by <span>Monique Olie</span> on <span>Unsplash</span></p>
       </div>
       <div class="right-column">
-        <p>The great form</p>
+        <div class="form-text">
+          <p>
+            Sign up and get insights how you can reach your goals in a short
+            amount of time. <br />
+            I will show you the path, so you can start walking.
+          </p>
+        </div>
         <form action="./index.html" id="form">
-          <label for="form">Let's go!</label>
-          <div class="form-field">
-            <label for="first-name">First Name</label>
-            <input type="text" name="firstName" id="first-name" />
+          <div class="form-label">
+            <label for="form">I want to find my path!</label>
           </div>
-          <div class="form-field">
-            <label for="last-name">Last Name</label>
-            <input type="text" name="lastName" id="last-name" />
+          <div class="form-fields">
+            <div class="form-field">
+              <label for="first-name">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                id="first-name"
+                placeholder="Erik"
+              />
+            </div>
+            <div class="form-field">
+              <label for="last-name">Last Name</label>
+              <input
+                type="text"
+                name="lastName"
+                id="last-name"
+                placeholder="Eriksson"
+              />
+            </div>
+            <div class="form-field">
+              <label for="email">email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="erik.eriksson@gmail.com"
+              />
+            </div>
+            <div class="form-field">
+              <label for="number">Phone Number</label>
+              <input
+                type="number"
+                name="number"
+                id="number"
+                placeholder="(01) 0123456789"
+              />
+            </div>
+            <div class="form-field">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder=""
+              />
+            </div>
+            <div class="form-field">
+              <label for="password-confirmation">Confirm password</label>
+              <input
+                type="password"
+                name="passwordConfirmation"
+                id="password-confirmation"
+                placeholder=""
+              />
+            </div>
           </div>
-          <div class="form-field">
-            <label for="email">email</label>
-            <input type="email" name="email" id="email" />
-          </div>
-          <div class="form-field">
-            <label for="number">Phone Number</label>
-            <input type="number" name="number" id="number" />
-          </div>
-          <div class="form-field">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" />
-          </div>
-          <div class="form-field">
-            <label for="password-confirmation">Confirm password</label>
-            <input
-              type="password"
-              name="passwordConfirmation"
-              id="password-confirmation"
-            />
+          <div class="form-footer">
+            <button>Create Account</button>
+            <p>Already haven an account? <a href="">Log In</a></p>
           </div>
         </form>
       </div>
