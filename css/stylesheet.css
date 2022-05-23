@@ -20,6 +20,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: black;
+  margin: 1.5% 0;
 }
 
 .complete-form {
@@ -28,7 +29,7 @@ body {
   align-items: center;
   height: auto;
   width: var(--form-width);
-  margin-top: min(100px, 10%);
+  margin: 3% 0;
 }
 
 img:first-child {
@@ -116,7 +117,6 @@ img:nth-child(2n) {
   gap: 20px;
   column-gap: 80px;
   box-sizing: border-box;
-  box-shadow: 50px 5px black;
 }
 
 .form-field {
@@ -130,6 +130,7 @@ img:nth-child(2n) {
   padding: 5px;
   border-radius: 6px;
   font-size: 1.2rem;
+  border: 2px solid #e5e7eb;
 }
 
 .form-field input[placeholder] {
@@ -169,6 +170,12 @@ button {
   padding: 10px;
   font-size: 1.5rem;
   font-family: quicksandregular, sans-serif;
+}
+
+.form-field input:focus {
+  border: 2px solid #0050f0;
+  outline: none;
+  box-shadow: 3px 3px 7px rgb(87, 87, 87);
 }
 
 button:hover,
