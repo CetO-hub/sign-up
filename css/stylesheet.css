@@ -185,10 +185,8 @@ a:hover {
 }
 
 .requirements {
-  overflow: hidden;
-  display: block;
-  padding: 20px 0 0 0;
-  max-height: 0;
+  display: none;
+  color: red;
 }
 
 input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
@@ -199,5 +197,6 @@ input[type="password"]:invalid:not(:focus):not(:placeholder-shown) {
 input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements,
 input[type="password"]:invalid:focus:not(:placeholder-shown) ~ .requirements {
   max-height: 200px;
-  padding: 20px 0;
+  padding: 20px 0 0;
+  display: block;
 }

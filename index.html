@@ -6,28 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/stylesheet.css" />
     <title>Document</title>
-    <!-- <script defer>
-      function compare() {
-        let isPassword = document.querySelector("#password");
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
         let isPasswordConfirm = document.querySelector(
           "#password-confirmation"
         );
-        let isRequirements = document.querySelectorAll(".requirements");
-        if (
-          isPassword.value === isPasswordConfirm.value &&
-          isPassword.value != ""
-        ) {
-          return isRequirements.forEach((item) =>
-            item.setAttribute("style", "min-height: 0px;")
+        console.log(isPasswordConfirm);
+        function compare() {
+          let isPassword = document.querySelector("#password");
+          let isRequirements = document.querySelector("#check");
+          if (
+            isPassword.value === isPasswordConfirm.value &&
+            isPasswordConfirm.value != ""
+          ) {
+            return isRequirements.setAttribute("style", "display: none;");
+          }
+          return isRequirements.setAttribute(
+            "style",
+            "display: block; max-height: 200px; padding: 20px 0 0;"
           );
         }
-        return isRequirements.forEach((item) =>
-          item.setAttribute("style", "min-height: 100px; display: block;")
-        );
-      }
-
-      document.addEventListener("change", compare);
-    </script> -->
+        isPasswordConfirm.addEventListener("change", compare);
+      });
+    </script>
   </head>
   <body>
     <div class="complete-form">
@@ -116,7 +117,7 @@
                 id="password-confirmation"
                 placeholder=" "
               />
-              <div class="requirements">Password does not match</div>
+              <div id="check" class="requirements">Password does not match</div>
             </div>
           </div>
           <div class="form-footer">
