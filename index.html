@@ -6,22 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/stylesheet.css" />
     <title>Document</title>
-    <script defer>
+    <!-- <script defer>
       function compare() {
         let isPassword = document.querySelector("#password");
         let isPasswordConfirm = document.querySelector(
           "#password-confirmation"
         );
+        let isRequirements = document.querySelectorAll(".requirements");
         if (
           isPassword.value === isPasswordConfirm.value &&
           isPassword.value != ""
         ) {
-          alert("Correct!");
-        } else return;
+          return isRequirements.forEach((item) =>
+            item.setAttribute("style", "min-height: 0px;")
+          );
+        }
+        return isRequirements.forEach((item) =>
+          item.setAttribute("style", "min-height: 100px; display: block;")
+        );
       }
 
-      document.addEventListener("mousemove", compare);
-    </script>
+      document.addEventListener("change", compare);
+    </script> -->
   </head>
   <body>
     <div class="complete-form">
